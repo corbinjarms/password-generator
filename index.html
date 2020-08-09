@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body class="bg-dark">
+    <div style="text-align: center;"><h1 class="text-white">Password Generator</h1></div>
+    
+    <div class="row">
+      <div class="col mx-xl-5 mx-xs-0">
+        
+      </div>
+    
+      <div class="col mx-xl-5 mx-xs-0 text-white">
+        <div class="col text-center my-4">
+          <button type="button" class="btn text-black" data-toggle="modal" data-target="#myModal">
+              Generate Password
+          </button>
+        </div>
+      </div>
+      <div class="col mx-xl-5 mx-xs-0">
+
+      </div>
+    </div>  
+    <div class="row">
+
+        <div class="col mx-xl-5 mx-xs-0"></div>
+      
+        <div class="col mx-xl-5 mx-xs-0 text-white">
+          <div class="col text-center text-break my-4">
+            <p id="sub-heading" class="text-white text-break"></p>
+        </div>
+
+        </div><div class="col mx-xl-5 mx-xs-0">
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-content">
+                    <form>
+                      <div class="slidecontainer">
+                        <div style="overflow: hidden;">
+                            <label for="fname" style="float: left;">Password Length:&nbsp</label>
+                            <p id="rangeValue">72</p>
+                        </div>
+                        <div></div>
+                        <input type="range" class="custom-range" min="8" max="128" value="72" class="slider" id="myRange" onchange="updateValue(this.value)">
+                        
+                        </div>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="lowercase" name="lowercase" class="mx-1">
+                        <label for="lowercase">lowercase</label>
+                      </div>          
+                      <div>
+                        <input type="checkbox" id="uppercase" name="uppercase" class="mx-1">
+                        <label for="uppercase">uppercase</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="numbers" name="numbers" class="mx-1">
+                        <label for="numbers">numbers</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" id="special-characters" name="special-characters" class="mx-1">
+                        <label for="special-characters">special-characters</label>
+                      </div>                              
+                    </form>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="submitFake" onclick="makePass()">GENERATE PASSWORD</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
